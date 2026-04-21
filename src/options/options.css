@@ -1,0 +1,39 @@
+body {
+  margin: 0;
+  font-family: Inter, system-ui, sans-serif;
+  background: #0f1220;
+  color: #eff2ff;
+}
+
+main {
+  max-width: 720px;
+  margin: 24px auto;
+  padding: 0 16px;
+}
+
+.card {
+  background: #1d2233;
+  border: 1px solid #2f3752;
+  border-radius: 12px;
+  padding: 14px;
+  margin-bottom: 14px;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+input[type='number'] {
+  display: block;
+  margin-top: 4px;
+  width: 180px;
+}
+
+button {
+  padding: 10px 14px;
+  border: none;
+  border-radius: 8px;
+  background: #4e7cff;
+  color: white;
+}

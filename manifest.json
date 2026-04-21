@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "FortiVault Password Manager",
+  "description": "Secure local-first password manager with encrypted vault and safe autofill.",
+  "version": "1.0.0",
+  "action": {
+    "default_title": "FortiVault",
+    "default_popup": "src/popup/popup.html"
+  },
+  "background": {
+    "service_worker": "src/background/background.js",
+    "type": "module"
+  },
+  "permissions": ["storage", "activeTab", "alarms"],
+  "host_permissions": ["http://*/*", "https://*/*"],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["src/content-scripts/content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "options_page": "src/options/options.html"
+}

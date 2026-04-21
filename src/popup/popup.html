@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FortiVault</title>
+    <link rel="stylesheet" href="./popup.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header>
+        <h1>FortiVault</h1>
+        <button id="lockButton" class="ghost">Lock</button>
+      </header>
+
+      <section id="authSection" class="card">
+        <h2 id="authTitle">Unlock vault</h2>
+        <input id="masterPassword" type="password" placeholder="Master password" autocomplete="current-password" />
+        <button id="authButton">Unlock</button>
+        <p class="hint" id="authHint"></p>
+      </section>
+
+      <section id="vaultSection" class="hidden">
+        <div class="card">
+          <h2>Quick Save</h2>
+          <input id="siteUrl" placeholder="Website URL" />
+          <input id="siteUsername" placeholder="Username / Email" />
+          <input id="sitePassword" placeholder="Password" type="password" />
+          <input id="siteCategory" placeholder="Category (work, banking, social...)" />
+          <div class="actions">
+            <button id="generateButton" class="ghost">Generate</button>
+            <button id="saveCredentialButton">Save</button>
+          </div>
+        </div>
+
+        <div class="card">
+          <h2>Vault</h2>
+          <input id="searchInput" placeholder="Search credentials" />
+          <ul id="credentialList"></ul>
+        </div>
+
+        <div class="actions mt">
+          <button id="autofillButton">Autofill Current Tab</button>
+          <button id="openOptions" class="ghost">Settings</button>
+        </div>
+      </section>
+    </main>
+
+    <script type="module" src="./popup.js"></script>
+  </body>
+</html>
