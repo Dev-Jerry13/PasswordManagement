@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FortiVault Settings</title>
+    <link rel="stylesheet" href="./options.css" />
+  </head>
+  <body>
+    <main>
+      <h1>FortiVault Settings</h1>
+      <section class="card">
+        <label>Session timeout (minutes)
+          <input id="sessionTimeoutMinutes" type="number" min="1" max="120" />
+        </label>
+        <label>Clipboard auto-clear (seconds)
+          <input id="clipboardTimeoutSeconds" type="number" min="5" max="120" />
+        </label>
+        <label>
+          <input id="phishingProtection" type="checkbox" />
+          Enable phishing/domain mismatch protection
+        </label>
+        <label>
+          <input id="darkMode" type="checkbox" />
+          Enable dark mode
+        </label>
+      </section>
+
+      <section class="card">
+        <h2>Biometric Quick Unlock (Optional)</h2>
+        <p id="biometricHint"></p>
+        <label>
+          <input id="biometricEnabled" type="checkbox" />
+          Enable platform biometric prompt when supported
+        </label>
+      </section>
+
+      <button id="saveButton">Save Settings</button>
+      <p id="status"></p>
+    </main>
+
+    <script type="module" src="./options.js"></script>
+  </body>
+</html>
